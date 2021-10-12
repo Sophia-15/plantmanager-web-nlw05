@@ -18,11 +18,21 @@
     font-weight: 600;
     color: var(--heading);
   }
+
+  &:hover {
+    border: 1px solid var(--green);
+  }
 }
 
 @media (max-width: 867px) {
   .select-plant {
     width: 20rem;
+  }
+}
+
+@media (max-width: 466px) {
+  .select-plant {
+    width: 100%;
   }
 }
 

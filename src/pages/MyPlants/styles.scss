@@ -64,6 +64,11 @@
   .trashcan {
     font-size: 24px;
     color: var(--red);
+    transition: .2s ease-in;
+    
+    &:hover {
+      transform: translateY(-7px);
+    }
   }
   
   img {

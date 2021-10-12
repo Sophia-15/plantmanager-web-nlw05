@@ -1,0 +1,103 @@
+
+
+.my-plants-content {
+  padding: 3.3125rem 8.6%;
+}
+
+.to-water {
+  display: flex;
+  align-items: center;
+  padding: 2.25rem 1.5rem;
+  width: auto;
+  background: linear-gradient(140.54deg, #E6F1FA 22.58%, #EBF6FF 80.4%);
+  border-radius: 20px;
+
+  p {
+    margin-left: 1.75rem;
+    font-size: 2rem;
+    color: var(--blue);
+  }
+}
+
+.water-next {
+  h2 {
+    margin: 3.3125rem 0 1.0625rem 0;
+    font-size: 24px;
+    color: var(--heading);
+  }
+}
+
+.plants-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.empty-plants-container {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  span {
+    font-size: 10rem;
+  }
+
+  p {
+    font-size: 24px;
+    color: var(--body-dark);
+    text-align: center;
+  }
+}
+
+.plant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  background-color: var(--shape);
+  padding: 1.5rem;
+  border-radius: 20px;
+
+  .trashcan {
+    font-size: 24px;
+    color: var(--red);
+  }
+  
+  img {
+    height: 5rem;
+  }
+
+  .plant-info {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    p {
+      font-size: 17px;
+      color: var(--body-dark);
+      font-weight: 500;
+    }
+  }
+
+  .when-to-water {
+    font-size: 15px;
+
+    p {
+      color: var(--body-light);
+    }
+
+    span {
+      color: var(--body-dark);
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 867px) {
+  .plant {
+    width: 100%;
+  }
+}

@@ -1,0 +1,83 @@
+.welcome-page {
+  display: flex;
+  height: 100vh;
+}
+
+.plant-manager-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+
+  h1 {
+    font-size: 2rem;
+    width: 18rem;
+    text-align: center;
+    color: var(--heading);
+  }
+
+  img {
+    margin: 5rem;
+    height: 25rem;
+  }
+
+  p {
+    font-size: 1.0625rem;
+    text-align: center;
+    width: 17.9rem;
+    line-height: 1.5625rem;
+    color: var(--body-dark);
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--shape);
+
+  span {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 27.2px;
+    width: 13rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 1.5rem 0 2.5rem 0;
+    color: var(--heading);
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    background-color: var(--shape);
+    text-align: center;
+    width: 16.4375rem;
+    font-size: 17px;
+
+    &:focus {
+      border-bottom: 1px solid var(--green);
+    }
+  }
+
+  button {
+    margin-top: 2.5rem;
+    background-color: var(--green);
+    padding: 1rem 4.875rem;
+    font-size: 17px;
+    color: var(--white);
+    font-weight: 500;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 970px) {
+  .plant-manager-info {
+    display: none;
+  }
+}

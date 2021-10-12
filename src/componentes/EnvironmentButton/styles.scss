@@ -1,0 +1,23 @@
+.environment-button {
+  margin-right: 1.25rem;
+  padding: .5625rem 1.0625rem;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 3.125rem;
+  border-radius: .75rem;
+  color: var(--heading);
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &.active {
+    background-color: var(--green-light);
+    color: var(--green-dark);
+  }
+}
+
+@media (max-width: 927px) {
+  .environment-button {
+  }
+}

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+:root {
+  --green: #32B768;
+  --green-dark: #2B7A4B;
+  --green-light: #DAF2E4;
+
+  --heading: #52665A;
+  --body-dark: #5C6660;
+  --body-light: #AAB2AD;
+
+  --background: #FFFFFF;
+  --shape: #F0F0F0;
+  --white: #FFFFFF;
+  --gray: #CFCFCF;
+
+  --blue: #3D7199;
+  --blue_light: #EBF6FF;
+
+  --red: #E83F5B;
+}
+
+//Global medias
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 760px) {
+  html {
+    font-size: 77.5%;
+  }
+}
+
+@media (max-width: 630px) {
+  html {
+    font-size: 67.5%;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 57.5%;
+  }
+}

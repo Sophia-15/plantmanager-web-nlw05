@@ -1,0 +1,28 @@
+.select-plant {
+  background: var(--shape);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 47px;
+  width: 10.875rem;
+  border-radius: 1.25rem;
+  text-align: center;
+
+  img {
+    height: 6.25rem;
+    margin-bottom: 12px;
+  }
+
+  span {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--heading);
+  }
+}
+
+@media (max-width: 867px) {
+  .select-plant {
+    width: 20rem;
+  }
+}
+

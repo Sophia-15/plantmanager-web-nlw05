@@ -8,7 +8,7 @@
   color: var(--heading);
 
   &:hover {
-    opacity: 80%;
+    filter: brightness(95%);
   }
 
   &.active {

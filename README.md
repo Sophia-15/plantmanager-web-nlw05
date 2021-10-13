@@ -46,7 +46,7 @@ $ yarn install
 
 ## 💻 Projeto
 
-Esse projeto foi feito na NLW 05 de React Native, então eu peguei a inspiração e fiz para ReactJS, totalmente responsivo. Futuramente pretendo adicionar um PWA para esse projeto. 
+Esse projeto foi feito na NLW 05 de React Native, então eu peguei a inspiração e fiz para ReactJS, totalmente responsivo. Futuramente pretendo adicionar um PWA para esse projeto. Clique [aqui](https://plantmanager-web.herokuapp.com) para testar a aplicação.
 
 
 ## 🔖 Layout

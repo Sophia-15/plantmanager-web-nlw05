@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.JSON_SERVER_ULR,
+  baseURL: 'https://plantmanager-db.herokuapp.com',
 });
 
 export default api;

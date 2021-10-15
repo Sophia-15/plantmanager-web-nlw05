@@ -41,7 +41,7 @@ $ git clone https://github.com/Sophia-15/plantmanager-web-nlw05.git && cd plantm
 Siga os passos abaixo
 ```bash
 # Instalar as dependências 
-$ yarn install
+$ yarn 
 ```
 
 ## 💻 Projeto

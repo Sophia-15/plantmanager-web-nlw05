@@ -35,7 +35,7 @@ Esse projeto foi feito com as seguintes tecnologias.
 Clone esse projeto e acesse sua pasta
 
 ```bash
-$ git clone https://github.com/Sophia-15/plantmanager-web-nlw05.git && cd plantmanager-web-05
+$ git clone https://github.com/Sophia-15/plantmanager-web-nlw05.git && cd plantmanager-web-nlw05
 ```
 
 Siga os passos abaixo

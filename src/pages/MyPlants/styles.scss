@@ -1,5 +1,3 @@
-
-
 .my-plants-content {
   padding: 3.3125rem 8.6%;
 }
@@ -9,7 +7,7 @@
   align-items: center;
   padding: 2.25rem 1.5rem;
   width: auto;
-  background: linear-gradient(140.54deg, #E6F1FA 22.58%, #EBF6FF 80.4%);
+  background: linear-gradient(140.54deg, #e6f1fa 22.58%, #ebf6ff 80.4%);
   border-radius: 20px;
 
   p {
@@ -64,13 +62,13 @@
   .trashcan {
     font-size: 24px;
     color: var(--red);
-    transition: .2s ease-in;
-    
+    transition: 0.2s ease-in;
+
     &:hover {
       transform: translateY(-7px);
     }
   }
-  
+
   img {
     height: 5rem;
   }
@@ -98,11 +96,5 @@
       color: var(--body-dark);
       font-weight: 500;
     }
-  }
-}
-
-@media (max-width: 867px) {
-  .plant {
-    width: 100%;
   }
 }

@@ -16,11 +16,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "react/jsx-filename-extension": "off",
     "import/no-unresolved": "off",
@@ -35,6 +31,7 @@
     "camelcase": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "consistent-return":"off"
+    "consistent-return": "off",
+    "react/jsx-no-bind": "off"
   }
 }

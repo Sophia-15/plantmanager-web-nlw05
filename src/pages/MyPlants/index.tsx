@@ -10,6 +10,7 @@ import drop from '../../assets/drop.svg';
 import { Header } from '../../componentes/Header';
 
 import './styles.scss';
+import { Modal } from '../../componentes/Modal';
 
 interface PlantProps {
   id: string;
@@ -35,6 +36,8 @@ export function MyPlants() {
   const [plants, setPlants] = useState<PlantProps[]>([]);
   const [nextWateredPlant, setNextWateredPlant] = useState('');
   const [username, setUsername] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [modalPlant, setModalPlant] = useState<PlantProps>();
   const history = useHistory();
 
   useEffect(() => {
@@ -75,19 +78,27 @@ export function MyPlants() {
     setPlants(plantsSorted);
   }, []);
 
-  function handleRemovePlant(deletedPlant: PlantProps) {
-    try {
-      const removedPlant = plants.filter((plant) => deletedPlant.id !== plant.id);
-      const data = localStorage.getItem('@plantmanager:plants');
-      const allPlants = data ? (JSON.parse(data) as SavedPlantLocalStorageProps) : {};
-      delete allPlants[deletedPlant.id];
+  function handleRemovePlant(deletedPlant: PlantProps | undefined) {
+    if (deletedPlant) {
+      try {
+        const removedPlant = plants.filter((plant) => deletedPlant.id !== plant.id);
+        const data = localStorage.getItem('@plantmanager:plants');
+        const allPlants = data ? (JSON.parse(data) as SavedPlantLocalStorageProps) : {};
+        delete allPlants[deletedPlant.id];
 
-      localStorage.setItem('@plantmanager:plants', JSON.stringify(allPlants));
-      setPlants(removedPlant);
-      toast.success('Planta removida com sucesso!');
-    } catch (error) {
-      toast.error('Houve um erro excluindo a planta');
+        localStorage.setItem('@plantmanager:plants', JSON.stringify(allPlants));
+        setPlants(removedPlant);
+        toast.success('Planta removida com sucesso!');
+        setShowModal(!showModal);
+      } catch (error) {
+        toast.error('Houve um erro excluindo a planta');
+      }
     }
+  }
+
+  function toggleModal(plant: PlantProps) {
+    setShowModal(!showModal);
+    setModalPlant(plant);
   }
 
   return (
@@ -105,7 +116,6 @@ export function MyPlants() {
             {username}
           </h2>
           <div className="plants-container">
-
             {plants.length > 0 ? plants.map((plant) => (
               <button type="button" className="plant" key={plant.id}>
                 <div className="plant-info">
@@ -116,8 +126,10 @@ export function MyPlants() {
                   <p>Regar ás</p>
                   <span>{plant.timeNotification}</span>
                 </div>
-                <button type="button" onClick={() => handleRemovePlant(plant)}>
-                  <FiTrash className="trashcan" />
+                <button type="button" onClick={() => toggleModal(plant)}>
+                  <FiTrash
+                    className="trashcan"
+                  />
                 </button>
               </button>
 
@@ -134,6 +146,14 @@ export function MyPlants() {
           </div>
         </div>
       </main>
+      {showModal && (
+      <Modal
+        plant={modalPlant}
+        showModal={showModal}
+        setShowModal={setShowModal}
+        handleRemovePlant={handleRemovePlant}
+      />
+      )}
       <ToastContainer
         style={{ fontSize: '17px' }}
       />

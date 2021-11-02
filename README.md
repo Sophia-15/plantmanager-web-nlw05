@@ -59,4 +59,4 @@ Você precisa de uma conta no [Figma](http://figma.com/) para acessar.
 
 ---
 
-Made with 💜 by [Sophia](https://www.github.com/sophia-15) 👋
+Made with 💜 by [Sophia Gallindo](https://www.github.com/sophia-15) 👋

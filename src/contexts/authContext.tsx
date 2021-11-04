@@ -29,6 +29,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     if (username) {
       setIsAuthenticated(true);
       setUser(username);
+      history.push('/myplants');
     }
   }, []);
 

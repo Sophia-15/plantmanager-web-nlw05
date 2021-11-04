@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -10,15 +9,7 @@ import './styles.scss';
 
 export function Welcome() {
   const [username, setUsername] = useState('');
-  const history = useHistory();
   const { login } = useAuth();
-
-  useEffect(() => {
-    const user = localStorage.getItem('@plantmanager:user');
-    if (user) {
-      history.push('/myplants');
-    }
-  }, []);
 
   return (
     <div className="welcome-page">

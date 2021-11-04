@@ -37,12 +37,6 @@ export function SavePlant() {
   const { id } = useParams<PlantParams>();
 
   useEffect(() => {
-    if (!localStorage.getItem('@plantmanager:user')) {
-      history.push('/');
-    }
-  }, []);
-
-  useEffect(() => {
     async function getSavePlant() {
       const { data } = await api.get(`plants/${id}`);
 

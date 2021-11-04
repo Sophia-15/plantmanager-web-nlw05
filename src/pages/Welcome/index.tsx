@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import illustration from '../../assets/ilustra.svg';
+import { useAuth } from '../../hooks/useAuth';
 
 import './styles.scss';
 
 export function Welcome() {
   const [username, setUsername] = useState('');
   const history = useHistory();
+  const { login } = useAuth();
 
   useEffect(() => {
     const user = localStorage.getItem('@plantmanager:user');
@@ -17,16 +19,6 @@ export function Welcome() {
       history.push('/myplants');
     }
   }, []);
-
-  function saveNameToLocalStorage(name: string) {
-    if (!name) {
-      toast.error('Coloque seu nome!');
-      return;
-    }
-    localStorage.setItem('@plantmanager:user', JSON.stringify(name));
-
-    history.push('/myplants');
-  }
 
   return (
     <div className="welcome-page">
@@ -42,7 +34,7 @@ export function Welcome() {
         <span>🤔</span>
         <p>Como podemos chamar você?</p>
         <input type="text" placeholder="Digite seu nome" onChange={(e) => setUsername(e.target.value)} />
-        <button type="button" onClick={() => saveNameToLocalStorage(username)}>Confirmar</button>
+        <button type="button" onClick={() => login(username)}>Confirmar</button>
       </section>
       <ToastContainer
         style={{ fontSize: '17px' }}

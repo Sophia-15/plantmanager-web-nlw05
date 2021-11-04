@@ -4,13 +4,13 @@ import { pt } from 'date-fns/locale';
 import { FiTrash } from 'react-icons/fi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useHistory } from 'react-router-dom';
 
 import drop from '../../assets/drop.svg';
 import { Header } from '../../componentes/Header';
 
 import './styles.scss';
 import { Modal } from '../../componentes/Modal';
+import { useAuth } from '../../hooks/useAuth';
 
 interface PlantProps {
   id: string;
@@ -35,20 +35,9 @@ interface SavedPlantLocalStorageProps {
 export function MyPlants() {
   const [plants, setPlants] = useState<PlantProps[]>([]);
   const [nextWateredPlant, setNextWateredPlant] = useState('');
-  const [username, setUsername] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [modalPlant, setModalPlant] = useState<PlantProps>();
-  const history = useHistory();
-
-  useEffect(() => {
-    const nameLocal = localStorage.getItem('@plantmanager:user');
-    if (!nameLocal) {
-      history.push('/');
-    }
-    const name = nameLocal ? (JSON.parse(nameLocal)) : '';
-
-    setUsername(name);
-  }, []);
+  const { user } = useAuth();
 
   useEffect(() => {
     const data = localStorage.getItem('@plantmanager:plants');
@@ -113,7 +102,7 @@ export function MyPlants() {
           <h2>
             Plantinhas de
             {' '}
-            {username}
+            {user}
           </h2>
           <div className="plants-container">
             {plants.length > 0 ? plants.map((plant) => (

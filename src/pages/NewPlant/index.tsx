@@ -34,12 +34,6 @@ export function NewPlant() {
   const history = useHistory();
 
   useEffect(() => {
-    if (!localStorage.getItem('@plantmanager:user')) {
-      history.push('/');
-    }
-  }, []);
-
-  useEffect(() => {
     async function getEnvironments() {
       const { data } = await api.get('/plants_environments');
 

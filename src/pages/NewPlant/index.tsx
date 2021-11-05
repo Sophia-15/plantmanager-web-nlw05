@@ -3,9 +3,9 @@ import { useHistory } from 'react-router-dom';
 
 import './styles.scss';
 import api from '../../services/api';
-import { Header } from '../../componentes/Header';
-import { EnvironmentButton } from '../../componentes/EnvironmentButton';
-import { SelectPlantCard } from '../../componentes/SelectPlantCard';
+import { Header } from '../../components/Header';
+import { EnvironmentButton } from '../../components/EnvironmentButton';
+import { SelectPlantCard } from '../../components/SelectPlantCard';
 
 interface EnvironmentProps {
   key: string

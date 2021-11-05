@@ -6,10 +6,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import drop from '../../assets/drop.svg';
-import { Header } from '../../componentes/Header';
+import { Header } from '../../components/Header';
 
 import './styles.scss';
-import { Modal } from '../../componentes/Modal';
+import { Modal } from '../../components/Modal';
 import { useAuth } from '../../hooks/useAuth';
 
 interface PlantProps {

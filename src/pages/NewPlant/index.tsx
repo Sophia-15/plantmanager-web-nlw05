@@ -54,6 +54,7 @@ export function NewPlant() {
       const { data } = await api.get('/plants');
 
       setPlants(data);
+      setFilteredPlants(data);
     }
 
     getPlants();
